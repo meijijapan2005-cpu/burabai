@@ -2,50 +2,52 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Burabai — 日本のセール・お得情報を楽しく探すショッピング発見サイト。">
+<meta name="description" content="Burabai — 日本のセール・お得情報を、もっと楽しく。">
 <title>Burabai — お得を、冒険に。</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="grain"></div>
 <header>
-<a class="brand" href="#"><span>B</span> BURABAI</a>
+<a class="logo" href="#"><span class="logo-gem">B</span><span class="logo-word">BURABAI</span></a>
 <nav><a href="#deals">セール</a><a href="#categories">カテゴリー</a><a href="#about">Burabaiとは</a></nav>
 <button id="theme" aria-label="テーマ切替">☾</button>
 </header>
 
 <main>
 <section class="hero">
+<div class="glow g1"></div><div class="glow g2"></div>
 <div class="copy">
 <div class="eyebrow">DISCOVER • SAVE • ENJOY</div>
 <h1>お得を、<br><em>冒険に。</em></h1>
-<p>日本中のお得な商品を、もっと見つけやすく。<br>気になるアイテムを探してショップへ。</p>
-<div class="search"><span>⌕</span><input id="q" placeholder="商品・カテゴリーを検索…"><button id="go">検索</button></div>
-<div class="quick">
-<button data-filter="ファッション">#ファッション</button><button data-filter="ガジェット">#ガジェット</button>
-<button data-filter="コスメ">#コスメ</button><button data-filter="フード">#フード</button>
+<p>日本中のセールや注目アイテムを、ひとつの場所で。<br>Burabaiがあなたの「欲しい」を見つけます。</p>
+<div class="search"><b>⌕</b><input id="q" placeholder="商品・ブランドを検索…"><button id="go">検索</button></div>
+<div class="quick"><button data-filter="ファッション">#ファッション</button><button data-filter="ガジェット">#ガジェット</button><button data-filter="コスメ">#コスメ</button><button data-filter="フード">#フード</button></div>
 </div>
+<div class="scene" aria-hidden="true">
+<div class="moon"></div><div class="stars">✦　·　✧　　·</div>
+<div class="torii"><i></i><b></b><span></span><em></em></div>
+<div class="character"><div class="hair"></div><div class="face"></div><div class="coat"></div></div>
+<div class="card c1"><small>今日の最大割引</small><strong>−50%</strong></div>
+<div class="card c2"><small>NEW DEALS</small><strong>毎日更新</strong></div>
 </div>
-<div class="art"><div class="sun"></div><div class="mountain"></div><div class="torii">鳥居</div><div class="bubble">今日の注目<br><b>DEALS</b></div></div>
 </section>
 
-<section class="trust"><div><b>厳選</b><small>見やすいセール情報</small></div><div><b>シンプル</b><small>すぐショップへ</small></div><div><b>無料</b><small>登録なしで検索</small></div></section>
+<section class="metrics"><div><strong>DEALS</strong><small>お得を発見</small></div><div><strong>JAPAN</strong><small>日本向け</small></div><div><strong>DAILY</strong><small>毎日チェック</small></div></section>
 
 <section class="section" id="deals">
-<div class="title"><div><span>TRENDING NOW</span><h2>今日のおすすめ</h2></div><button id="all">すべて表示 →</button></div>
-<div class="filters" id="categories">
-<button class="active" data-filter="">すべて</button><button data-filter="ファッション">ファッション</button><button data-filter="ガジェット">ガジェット</button><button data-filter="コスメ">コスメ</button><button data-filter="フード">フード</button>
-</div>
-<div id="grid" class="grid"></div><p id="empty">一致する商品がありません。</p>
+<div class="section-head"><div><span>TRENDING NOW</span><h2>今日のおすすめ</h2></div><button id="all">すべて見る →</button></div>
+<div class="filters" id="categories"><button class="active" data-filter="">すべて</button><button data-filter="ファッション">ファッション</button><button data-filter="ガジェット">ガジェット</button><button data-filter="コスメ">コスメ</button><button data-filter="フード">フード</button></div>
+<div class="grid" id="grid"></div><p id="empty">一致する商品がありません。</p>
 </section>
 
 <section class="section about" id="about">
-<div><span>ABOUT BURABAI</span><h2>欲しいものとの出会いを、<br>もっとシンプルに。</h2></div>
-<p>Burabaiはショッピング発見サービスのプロトタイプです。現在表示している商品・価格・ショップ名・リンクはデモ用です。商用公開前に、提携ショップの正規フィード/APIやアフィリエイトリンクへ置き換えます。</p>
+<div><span>ABOUT BURABAI</span><h2>見つける時間を減らして、<br>楽しむ時間を増やす。</h2></div>
+<p>Burabaiは日本向けのショッピング発見サービスを目指すプロトタイプです。現在の商品・価格・店舗名はデモ表示です。正式公開時には正規のショップフィード/APIまたはアフィリエイトリンクへ接続します。</p>
 </section>
 </main>
-<footer><a class="brand" href="#"><span>B</span> BURABAI</a><small>© 2026 Burabai • Prototype</small></footer>
+<footer><a class="logo" href="#"><span class="logo-gem">B</span><span class="logo-word">BURABAI</span></a><small>© 2026 Burabai • Prototype</small></footer>
 <script src="script.js"></script>
 </body></html>

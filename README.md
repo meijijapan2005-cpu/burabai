@@ -1,15 +1,12 @@
-# Burabai v2
+# Burabai v3
 
-Japanese deals discovery prototype.
+Burabai v3 keeps the original dark anime/Japan-inspired identity while adding the v2 catalogue functionality.
 
-## Features
-- Japanese-first responsive UI
-- Search and category filters
-- Product cards with price/discount presentation
-- Dark/light theme
+- Responsive Japanese UI
+- Search
+- Category filters
+- Deal cards
+- Dark/light toggle
 - GitHub Pages compatible
 
-## Important
-All products, prices, merchants and discounts are DEMO data.
-The shop buttons are intentionally disabled until legitimate merchant feeds/APIs or affiliate programs are connected.
-Before commercial launch, add merchant terms compliance, privacy/legal pages, analytics consent where applicable, and real affiliate disclosures.
+All current products, merchants, prices and discounts are DEMO data. Shop buttons remain disabled until legitimate merchant/affiliate integrations are added.
