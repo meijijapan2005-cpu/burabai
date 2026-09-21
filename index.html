@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Burabai — 日本のセール・お得情報を、もっと楽しく。" />
+  <title>Burabai — お得を、冒険に。</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="nav">
+    <a class="brand" href="#"><span class="brand-mark">B</span><span>BURABAI</span></a>
+    <nav class="navlinks">
+      <a href="#deals">セール</a><a href="#categories">カテゴリー</a><a href="#about">Burabaiとは</a>
+    </nav>
+    <button class="ghost" id="themeBtn" aria-label="テーマ切替">☾</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="orb orb1"></div><div class="orb orb2"></div>
+      <div class="hero-copy">
+        <span class="eyebrow">DISCOVER • SAVE • ENJOY</span>
+        <h1>お得を、<br><span>冒険に。</span></h1>
+        <p>日本中のセールや注目アイテムを、ひとつの場所で。<br>Burabaiがあなたの「欲しい」を見つけます。</p>
+        <div class="search">
+          <span>⌕</span>
+          <input id="searchInput" type="search" placeholder="商品・ブランドを検索…" aria-label="検索">
+          <button id="searchBtn">検索</button>
+        </div>
+        <div class="chips">
+          <button data-query="ファッション">#ファッション</button>
+          <button data-query="ガジェット">#ガジェット</button>
+          <button data-query="コスメ">#コスメ</button>
+          <button data-query="フード">#フード</button>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="moon"></div>
+        <div class="torii"><i></i><b></b><em></em></div>
+        <div class="girl">
+          <div class="hair"></div><div class="face"></div><div class="body"></div>
+        </div>
+        <div class="float-card fc1"><small>今日の最大割引</small><strong>−50%</strong></div>
+        <div class="float-card fc2"><small>NEW DEALS</small><strong>毎日更新</strong></div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><strong>1,240+</strong><span>掲載セール</span></div>
+      <div><strong>320+</strong><span>ショップ</span></div>
+      <div><strong>毎日</strong><span>情報を更新</span></div>
+    </section>
+
+    <section class="section" id="deals">
+      <div class="section-head"><div><span class="eyebrow">TRENDING NOW</span><h2>今日のおすすめ</h2></div><button class="text-btn" id="showAll">すべて見る →</button></div>
+      <div class="deal-grid" id="dealGrid"></div>
+      <p class="empty" id="empty">一致する商品がありません。</p>
+    </section>
+
+    <section class="section categories" id="categories">
+      <div class="section-head"><div><span class="eyebrow">EXPLORE</span><h2>カテゴリーから探す</h2></div></div>
+      <div class="cat-grid">
+        <button data-query="ファッション"><span>✦</span>ファッション</button>
+        <button data-query="ガジェット"><span>⌁</span>ガジェット</button>
+        <button data-query="コスメ"><span>◇</span>コスメ</button>
+        <button data-query="フード"><span>◌</span>フード</button>
+      </div>
+    </section>
+
+    <section class="about section" id="about">
+      <div><span class="eyebrow">ABOUT BURABAI</span><h2>見つける時間を減らして、<br>楽しむ時間を増やす。</h2></div>
+      <p>Burabaiは、セール情報を見やすくまとめるショッピング発見サービスを目指しています。このデモ版ではサンプル商品を表示しています。実際の価格・在庫・提携リンクは、各ショップ/APIとの接続後に追加します。</p>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#"><span class="brand-mark">B</span><span>BURABAI</span></a><p>© 2026 Burabai. Demo.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
