@@ -1,12 +1,14 @@
-# Burabai v3
+# BURABAI — fixed dark edition
 
-Burabai v3 keeps the original dark anime/Japan-inspired identity while adding the v2 catalogue functionality.
+This build intentionally uses a permanent dark theme and restores the anime/Japan-inspired visual identity.
 
-- Responsive Japanese UI
-- Search
-- Category filters
-- Deal cards
-- Dark/light toggle
+Features:
+- Custom BURABAI mark
+- Dark neon Japanese hero
+- Anime-inspired original CSS character silhouette
+- Fuji / torii visual composition
+- Search and category filters
+- Responsive product grid
 - GitHub Pages compatible
 
-All current products, merchants, prices and discounts are DEMO data. Shop buttons remain disabled until legitimate merchant/affiliate integrations are added.
+Important: all current products, merchants, prices and discounts are DEMO data. Store buttons are intentionally disabled until legitimate merchant feeds/APIs or affiliate links are connected.
