@@ -1,14 +1,12 @@
-# BURABAI — fixed dark edition
+# BURABAI cinematic prototype
 
-This build intentionally uses a permanent dark theme and restores the anime/Japan-inspired visual identity.
+This version implements the approved visual direction:
+- permanent dark neo-Tokyo aesthetic
+- Fuji / torii / sakura / lantern composition
+- anime-inspired original CSS character
+- richer navigation and category bar
+- promotional banners
+- responsive deal catalogue
+- search and category filtering
 
-Features:
-- Custom BURABAI mark
-- Dark neon Japanese hero
-- Anime-inspired original CSS character silhouette
-- Fuji / torii visual composition
-- Search and category filters
-- Responsive product grid
-- GitHub Pages compatible
-
-Important: all current products, merchants, prices and discounts are DEMO data. Store buttons are intentionally disabled until legitimate merchant feeds/APIs or affiliate links are connected.
+All products, prices, discounts and merchants are demo placeholders. Replace them with authorized merchant/API/affiliate data before a commercial launch.

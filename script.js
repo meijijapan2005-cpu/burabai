@@ -1,13 +1,15 @@
 const products=[
-{cat:"ファッション",name:"Tokyo Street Jacket",price:"¥7,980",old:"¥12,800",off:"-38%",shop:"DEMO FASHION",icon:"🧥"},
-{cat:"ガジェット",name:"Wireless Headphones",price:"¥9,900",old:"¥14,900",off:"-34%",shop:"DEMO TECH",icon:"🎧"},
-{cat:"コスメ",name:"Sakura Skin Set",price:"¥3,480",old:"¥5,200",off:"-33%",shop:"DEMO BEAUTY",icon:"✦"},
-{cat:"フード",name:"Matcha Selection",price:"¥1,500",old:"¥2,000",off:"-25%",shop:"DEMO FOOD",icon:"🍵"},
-{cat:"ファッション",name:"Minimal Sneakers",price:"¥6,400",old:"¥9,200",off:"-30%",shop:"DEMO FASHION",icon:"👟"},
-{cat:"ガジェット",name:"Compact Keyboard",price:"¥5,980",old:"¥7,980",off:"-25%",shop:"DEMO TECH",icon:"⌨️"},
-{cat:"コスメ",name:"Night Glow Serum",price:"¥2,700",old:"¥3,600",off:"-25%",shop:"DEMO BEAUTY",icon:"◇"},
-{cat:"フード",name:"Premium Snack Box",price:"¥1,980",old:"¥2,800",off:"-29%",shop:"DEMO FOOD",icon:"🍘"}];
-const grid=document.querySelector("#grid"),q=document.querySelector("#q"),empty=document.querySelector("#empty");let filter="";
-function render(){const term=q.value.trim().toLowerCase();const list=products.filter(x=>(!filter||x.cat===filter)&&(`${x.cat} ${x.name} ${x.shop}`.toLowerCase().includes(term)));grid.innerHTML=list.map(x=>`<article class="product"><div class="product-visual"><span class="discount">${x.off}</span><span class="demo">DEMO</span><i>${x.icon}</i></div><div class="body"><small>${x.cat}</small><h3>${x.name}</h3><span class="price">${x.price}</span><span class="old">${x.old}</span><div class="merchant">${x.shop}</div><button class="visit" disabled title="提携ショップ接続後に有効になります">ショップで見る ↗</button></div></article>`).join("");empty.style.display=list.length?"none":"block"}
-function choose(v){filter=v;document.querySelectorAll(".filters [data-filter]").forEach(b=>b.classList.toggle("active",b.dataset.filter===v));render();document.querySelector("#deals").scrollIntoView({behavior:"smooth"})}
-document.querySelector("#go").onclick=render;q.addEventListener("keydown",e=>{if(e.key==="Enter")render()});document.querySelectorAll("[data-filter]").forEach(b=>b.onclick=()=>choose(b.dataset.filter));document.querySelector("#all").onclick=()=>{q.value="";choose("")};render();
+{cat:"ゲーム",name:"Portable Game Console",merchant:"DEMO GAME",price:"¥29,800",old:"¥43,978",off:"-32%",icon:"🎮",rating:"★ 4.8"},
+{cat:"家電・PC",name:"Wireless Earbuds Pro",merchant:"DEMO TECH",price:"¥32,800",old:"¥45,800",off:"-28%",icon:"🎧",rating:"★ 4.7"},
+{cat:"家電・PC",name:"Premium Hair Dryer",merchant:"DEMO BEAUTY TECH",price:"¥29,800",old:"¥49,800",off:"-40%",icon:"♨",rating:"★ 4.6"},
+{cat:"ファッション",name:"Tokyo Street Sneakers",merchant:"DEMO FASHION",price:"¥11,800",old:"¥15,800",off:"-25%",icon:"👟",rating:"★ 4.5"},
+{cat:"コスメ・美容",name:"Facial Treatment Essence",merchant:"DEMO BEAUTY",price:"¥18,900",old:"¥27,500",off:"-30%",icon:"🧴",rating:"★ 4.8"},
+{cat:"本・漫画",name:"人気コミック 25巻",merchant:"DEMO BOOKS",price:"¥550",old:"¥770",off:"-35%",icon:"📕",rating:"★ 4.9"},
+{cat:"食品・飲料",name:"Premium Matcha Set",merchant:"DEMO FOOD",price:"¥2,480",old:"¥3,400",off:"-27%",icon:"🍵",rating:"★ 4.7"},
+{cat:"インテリア",name:"Minimal Table Lamp",merchant:"DEMO HOME",price:"¥4,980",old:"¥6,980",off:"-29%",icon:"💡",rating:"★ 4.6"},
+{cat:"旅行",name:"Kyoto Travel Pass",merchant:"DEMO TRAVEL",price:"¥3,900",old:"¥5,500",off:"-29%",icon:"🎫",rating:"★ 4.8"}
+];
+const grid=document.querySelector("#grid"),search=document.querySelector("#search"),empty=document.querySelector("#empty");let filter="";
+function render(){let q=search.value.trim().toLowerCase();let list=products.filter(p=>(!filter||p.cat===filter)&&(`${p.cat} ${p.name} ${p.merchant}`.toLowerCase().includes(q)));grid.innerHTML=list.map(p=>`<article class="product"><div class="product-visual"><span class="discount">${p.off}</span><span class="heart">♡</span><i>${p.icon}</i></div><div class="product-body"><h3>${p.name}</h3><div class="merchant">${p.merchant}</div><div class="prices"><span class="price">${p.price}</span><span class="old">${p.old}</span></div><div class="rating">${p.rating}<span class="demo">DEMO</span></div></div></article>`).join("");empty.style.display=list.length?"none":"block"}
+function choose(v){filter=v;document.querySelectorAll(".categories button").forEach(b=>b.classList.toggle("active",b.dataset.filter===v));render();document.querySelector("#deals").scrollIntoView({behavior:"smooth"})}
+document.querySelectorAll(".categories button").forEach(b=>b.onclick=()=>choose(b.dataset.filter));document.querySelector("#searchBtn").onclick=render;search.addEventListener("keydown",e=>{if(e.key==="Enter")render()});document.querySelector("#showAll").onclick=()=>{filter="";search.value="";document.querySelectorAll(".categories button").forEach((b,i)=>b.classList.toggle("active",i===0));render()};render();
